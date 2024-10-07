@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<div class="container mt-5 pt-4">
+    
+    <div class="col-6 mx-auto">
+        <h3 class="text-center">Registro</h3>
+        <form method="post">
+            {% csrf_token %}
+
+            {% if message %}
+            <div class="alert alert-{{class}}">
+                {{message}}
+            </div>
+            {% endif %}
+
+            <div class="row">
+                <div class="form-group col-12">
+                    <input type="text" placeholder="Correo" class="form-control" name="email" id="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-12">
+                    <input type="text" placeholder="Nombre" class="form-control" name="name" id="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-12">
+                    <input type="text" placeholder="Nro celular" class="form-control" name="mobile" id="">
+                </div>
+            </div>
+
+            <p>Ya tienes cuenta <a href="{% url 'login' %}">Iniciar sesión</a></p>
+            <button class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+</div>
+
+
+{% endblock %}

@@ -13,24 +13,25 @@ import Swal from 'sweetalert2';
 import '../Css/Login.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     const login = async (e) => {
-        e.preventDefault(); 
-
+        e.preventDefault();
+    
         const result = await handleLogin(username, password.trim());
-
+    
         if (result.success) {
+            sessionStorage.setItem('roles', JSON.stringify(result.groups)); 
+    
             Swal.fire({
                 title: '¡Inicio de sesión exitoso!',
                 icon: 'success',
                 confirmButtonText: 'Aceptar'
             }).then(() => {
-                navigate('/home');
+                navigate('/home'); 
             });
         } else {
             Swal.fire({
@@ -41,6 +42,7 @@ const Login = () => {
             });
         }
     };
+    
 
     return (
         <MDBContainer fluid className="p-5 my-5">

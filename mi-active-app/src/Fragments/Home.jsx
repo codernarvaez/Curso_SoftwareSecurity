@@ -20,7 +20,6 @@ const Home = () => {
             <h1 className="text-center">Bienvenido a la Página Principal</h1>
             <p className="text-center">¡Has iniciado sesión correctamente!</p>
 
-            {/* Mensajes específicos según el rol del usuario */}
             {roles.includes('Administrativos') && (
                 <p className="text-center text-warning">Tienes acceso al Panel de Administración.</p>
             )}
@@ -31,7 +30,6 @@ const Home = () => {
                 <p className="text-center text-success">Hola, Estudiante. Accede a tus materiales de estudio.</p>
             )}
 
-            {/* Mostrar enlaces según el rol del usuario */}
             {roles.includes('Administrativos') && (
                 <div className="text-center my-3">
                     <button 
@@ -62,7 +60,6 @@ const Home = () => {
                 </div>
             )}
 
-            {/* Botón para cerrar sesión */}
             <div className="text-center my-5">
                 <button 
                     className="btn btn-danger mx-2"

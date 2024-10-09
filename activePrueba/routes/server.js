@@ -9,8 +9,8 @@ const PORT = 3006;
 
 // Middleware
 app.use(cors({
-    origin: 'http://localhost:3000', // URL de tu frontend
-    credentials: true // Permitir el envío de cookies
+    origin: 'http://localhost:3000', 
+    credentials: true 
 }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -63,7 +63,6 @@ app.post('/login', (req, res) => {
                     let groups = [];
                     if (memberOfAttr) {
                         groups = memberOfAttr.values.map(groupDN => {
-                            // Extraer el CN del DN del grupo
                             const cnMatch = groupDN.match(/CN=([^,]+)/);
                             return cnMatch ? cnMatch[1] : groupDN; 
                         });

@@ -73,7 +73,7 @@ app.post('/auth', async (req, res)=>{
                 res.render('login',{
                     alert: true,
                     alertTitle: 'Error',
-                    alertMessage: '¡Usuario y/o password incorrecto!',
+                    alertMessage: '¡Usuario y/o password incorrecto',
                     alertIcon: 'error',
                     showConfirmButton: true,
                     timer: false,

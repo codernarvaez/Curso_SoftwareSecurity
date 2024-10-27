@@ -16,7 +16,8 @@ Este proyecto incluye un microservicio de login y una base de datos configurada 
 1. **Clonar el repositorio**:
 
    ```bash
-   git clone https://github.com/usuario/Curso_SoftwareSecurity.git
+   git clone  https://github.com/codernarvaez/Curso_SoftwareSecurity
+   git checkout Karen_Gonzaga
    cd Curso_SoftwareSecurity/login-microservice
    ```
 

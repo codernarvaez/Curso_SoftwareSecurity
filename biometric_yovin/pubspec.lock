@@ -49,6 +49,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
+  did_change_authlocal:
+    dependency: "direct main"
+    description:
+      name: did_change_authlocal
+      sha256: "4d88766678717fda68f0fede303a94bcc2557825c682ebb6064ec669999bdc96"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.6"
   fake_async:
     dependency: transitive
     description:

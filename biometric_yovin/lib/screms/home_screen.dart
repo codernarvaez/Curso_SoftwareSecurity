@@ -10,6 +10,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   bool auth = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,8 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ? null
           : FloatingActionButton(
               onPressed: () async {
-                final authen = await LocalAuth.authenticate();
-                print(authen );
+                final authen = await LocalAuth.authenticate(context);  // Pasar el contexto aquí
+                print(authen);
                 print('authen');
                 setState(() {
                   auth = authen;
